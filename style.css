@@ -1,0 +1,165 @@
+body {
+    background-color: #dde8f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #414F6F; 
+}
+
+/* 
+   Form Container (General Styles for both Register and Login)
+ */
+
+#myRegister, #myLogin {
+    background-color: #FFFFFF;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(173, 188, 239, 0.08); /* เงา */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#myRegister {
+    max-width: 480px; /* ฟอร์มลงทะเบียน */
+}
+
+#myLogin {
+    max-width: 380px; /* ฟอร์มเข้าสู่ */
+}
+
+fieldset {
+    border: 1px solid #b9b9b9; /* เส้นตรงกรอบ */
+    padding: 30px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+legend {
+    font-size: 1.6em;
+    font-weight: 300;
+    color: #414F6F;
+    padding: 0 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* 
+   Input Fields and Focus State (ใช้ร่วมกัน)
+ */
+
+/* สไตล์พื้นฐานของ Input Text/Email/Password/Date */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #f2c4f1; /* boxกรอกข้อมูล */
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 1em;
+    display: block; 
+    margin-top: 5px;
+}
+
+/* Focus State (ไฮไลต์ด้วยสีพาสเทล) */
+input:focus {
+    border-color: #B9C7DC; 
+    box-shadow: 0 0 0 3px rgba(185, 199, 220, 0.4);
+    outline: none;
+}
+
+/*  Buttons ใช้ด้วยกัน*/
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 25px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-right: 10px;
+}
+
+/* Primary Button (Register/Login) - สีเขียวมิ้นต์พาสเทล */
+input[type="submit"] {
+    background-color: #98AE9B; 
+    color: white; 
+}
+
+input[type="submit"]:hover {
+    background-color: #839b86; 
+    transform: translateY(-1px);
+}
+
+/* Secondary Button (Reset/Clear)  */
+input[type="reset"] {
+    background-color: #EEDDFF;
+    color: #414F6F;
+}
+
+input[type="reset"]:hover {
+    background-color: #dbc9e8;
+    transform: translateY(-1px);
+}
+
+/* 
+   Register Specific Styles (#myRegister)
+ */
+
+/* ข้อความ * require และ Error message */
+#myRegister span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+#myRegister #errormsg {
+    color: #E59EAF; 
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* จัด First name/Last name ให้อยู่ในบรรทัดเดียวกัน */
+#myRegister input[name="firstname"],
+#myRegister input[name="lastname"] {
+    width: calc(50% - 10px); 
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#myRegister input[name="lastname"] {
+    margin-right: 0;
+}
+
+/* ปรับ Label ของ First name/Last name */
+#myRegister span:nth-of-type(3) { /* First name* */
+    display: inline-block;
+    width: calc(50% - 10px);
+    margin-right: 15px;
+}
+
+/* Gender Group */
+#myRegister input[type="radio"] {
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+
+/* Label (Username/Password) */
+#myLogin fieldset > label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
